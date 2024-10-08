@@ -5,6 +5,8 @@ import { PROJECTS } from '../constantes/projects'
 import ProjectCard from '../Components/ProjectCard'
 import ClientCard from '../Components/ClientCard'
 import { CLIENTS } from '../constantes/clients'
+import { MEMBERS } from '../constantes/members'
+import MemberCard from '../Components/MemberCard'
 
 const Home = () => {
   return (
@@ -38,6 +40,19 @@ const Home = () => {
         <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-8'>
           {
             CLIENTS && CLIENTS.map(client => <ClientCard client={client} />)
+          }
+        </div>
+      </div>
+
+      <div>
+        <div className='flex justify-between items-center py-4'>
+          <h1 className='text-lg font-semibold'>Members</h1>
+          <p className='text-sm underline text-indigo-600'>See All</p>
+        </div>
+
+        <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-8'>
+          {
+            MEMBERS && MEMBERS.map(member => <MemberCard member={member} />)
           }
         </div>
       </div>

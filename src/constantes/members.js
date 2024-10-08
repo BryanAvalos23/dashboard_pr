@@ -1,4 +1,4 @@
-export const members = [
+export const MEMBERS = [
   {
     total_members: 4,
     job: "UI Designer",
